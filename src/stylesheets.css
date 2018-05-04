@@ -1,0 +1,22 @@
+#header{
+    text-align: center
+}
+
+#header button{
+    width: 10em;
+    line-height: 20px;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+
+#content {
+    counter-reset: field 0;
+}
+
+.field h1{
+    counter-increment: field;    
+}
+
+.field h1::before{
+    content: counter(field)'.';
+}
