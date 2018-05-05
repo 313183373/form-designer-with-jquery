@@ -1,5 +1,12 @@
 #header{
-    text-align: center
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+#preview {
+    position: absolute;
+    right: 20px;
 }
 
 #header button{
@@ -11,12 +18,39 @@
 
 #content {
     counter-reset: field 0;
+}   
+
+.disable {
+    pointer-events: none;
 }
 
-.field h1{
-    counter-increment: field;    
+/* #content .ui-selecting{
+    background-color: yellow;
 }
 
-.field h1::before{
+#content .ui-selected {
+    background-color: white;
+} */
+
+.field h3{
+    counter-increment: field;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.field h3::before{
     content: counter(field)'.';
+}
+
+.field:hover{
+    border: 1px solid red;
+}
+
+
+.field{
+    border: 1px solid white;
+}
+
+#dialog{
+    text-align: center;
 }
